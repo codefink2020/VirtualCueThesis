@@ -31,10 +31,10 @@
 		twoside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,
 	 	footinclude=true,cleardoublepage=empty,
 		dottedtoc, % Make page numbers in the table of contents flushed right with dots leading to them
-		BCOR=2mm,paper=a4,fontsize=10pt, % Binding correction, paper type and font size
-		ngerman,dutch, % Languages, change this to your language(s)
-		]{scrreprt}
-
+		BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
+		ngerman,american, % Languages, change this to your language(s)
+		]{scrreprt} 
+                
 % Includes the file which contains all the document configurations and packages - make sure to edit this file
 \input{classicthesis-config}
 
@@ -43,14 +43,13 @@
 
 %\hyphenation{Put special hyphenation here}
 
-
 \begin{document}
 
 \frenchspacing % Reduces space after periods to make text more compact
 
 \raggedbottom % Makes all pages the height of the text on that page
 
-\selectlanguage{dutch} % Select your default language - e.g. american or ngerman
+\selectlanguage{american} % Select your default language - e.g. american or ngerman
 
 %\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
 %\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
@@ -67,15 +66,15 @@
 
 \include{FrontBackMatter/Titleback} % Back of the title page
 
-%\cleardoublepage\include{FrontBackMatter/Dedication} % Dedication page
+\cleardoublepage\include{FrontBackMatter/Dedication} % Dedication page
 
 %\cleardoublepage\include{FrontBackMatter/Foreword} % Uncomment and create a Foreword.tex to include a foreword
 
 \cleardoublepage\include{FrontBackMatter/Abstract} % Abstract page
 
-%\cleardoublepage\include{FrontBackMatter/Publications} % Publications from the thesis page
+\cleardoublepage\include{FrontBackMatter/Publications} % Publications from the thesis page
 
-%\cleardoublepage\include{FrontBackMatter/Acknowledgments} % Acknowledgements page
+\cleardoublepage\include{FrontBackMatter/Acknowledgments} % Acknowledgements page
 
 \pagestyle{scrheadings} % Show chapter titles as headings
 
@@ -92,56 +91,23 @@
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-% Text on the Part 1 page describing  the content in Part 1
+\ctparttext{You can put some informational part preamble text here. Illo principalmente su nos. Non message \emph{occidental} angloromanic da. Debitas effortio simplificate sia se, auxiliar summarios da que, se avantiate publicationes via. Pan in terra summarios, capital interlingua se que. Al via multo esser specimen, campo responder que da. Le usate medical addresses pro, europa origine sanctificate nos se.} % Text on the Part 1 page describing  the content in Part 1
 
-\include{Chapters/0000-Inleiding} % inleiding
+\part{Some Kind of Manual} % First part of the thesis
 
-\ctparttext{}
-\part{Idee}\label{prt:idee} % First part of the thesis
-\include{Chapters/P01-Idee/0101-HuidigeSituatie} % Chapter 1 Eaglescience
-\include{Chapters/P01-Idee/0102-Idee} % Chapter 2 Opdracht
-\include{Chapters/P01-Idee/0103-HyphotetischeSituatie}
-
-\ctparttext{}
-\part{Onderzoek}\label{prt:Onderzoek} % Second part of the thesis
-\include{Chapters/P02-Onderzoek/0201-OnderzoekInl}
-\include{Chapters/P02-Onderzoek/0202-OnderzoekMethode}
-\include{Chapters/P02-Onderzoek/0203-Domein}
-\include{Chapters/P02-Onderzoek/0204-OnderzoekAnoniemTracking}
-\include{Chapters/P02-Onderzoek/0205-OnderzoekConc}
-\include{Chapters/P02-Onderzoek/0206-OnderzoekWachtrijen}
-
-
-\ctparttext{}
-\part{Requirements Analyse en planning}\label{prt:Requirements}
-\include{Chapters/P03-Requirements/0301-RequirementsInleiding}
-\include{Chapters/P03-Requirements/0302-RequirementAnalyse}
-
-
-
-\ctparttext{}
-\part{Functioneel Ontwerp}\label{prt:Functioneel Ontwerp}
-\include{Chapters/P04-FunctioneelOntwerp/0401-impInl}
-\include{Chapters/P04-FunctioneelOntwerp/0402-FunctioneelOntwerp}
-\include{Chapters/P04-FunctioneelOntwerp/0403-implarchitectuur}
-\include{Chapters/P04-FunctioneelOntwerp/0404-implImplementatie}
-\include{Chapters/P04-FunctioneelOntwerp/0405-implTesting}
-\include{Chapters/P04-FunctioneelOntwerp/0406-implDeploy}
-\include{Chapters/P04-FunctioneelOntwerp/0407-implResultaat}
-
- \ctparttext{}
-
- \part{Conclusie}\label{prt:Conclussie}
- \include{Chapters/P05-Conclusie/0501-conInl}
- \include{Chapters/P05-Conclusie/0502-conclussie}
+\include{Chapters/Chapter01} % Chapter 1
 
 \cleardoublepage % Empty page before the start of the next part
 
 %------------------------------------------------
 
-\ctparttext{}
- % Text on the Part 2 page describing the content in Part 2
+\ctparttext{You can put some informational part preamble text here. Illo principalmente su nos. Non message \emph{occidental} angloromanic da. Debitas effortio simplificate sia se, auxiliar summarios da que, se avantiate publicationes via. Pan in terra summarios, capital interlingua se que. Al via multo esser specimen, campo responder que da. Le usate medical addresses pro, europa origine sanctificate nos se.} % Text on the Part 2 page describing the content in Part 2
 
+\part{The Showcase} % Second part of the thesis
+
+\include{Chapters/Chapter02} % Chapter 2
+\include{Chapters/Chapter03} % Chapter 3
+%\include{Chapters/Chapter04} % Chapter 4 - empty template
 
 \cleardoublepage % Empty page before the start of the next part
 
@@ -151,11 +117,11 @@
 
 \appendix
 
-\part{Appendix}\label{prt:Appendix} % New part of the thesis for the appendix
+\part{Appendix} % New part of the thesis for the appendix
 
-\include{Chapters/PXX-Appendix/A01-Interviews} % Appendix A
-\include{Chapters/PXX-Appendix/A02-VoortgangModule}
-\include{Chapters/PXX-Appendix/A03-begrippenlijst} % Appendix B - empty template
+\include{Chapters/Chapter0A} % Appendix A
+%\include{Chapters/Chapter0B} % Appendix B - empty template
+
 %----------------------------------------------------------------------------------------
 %	POST-CONTENT THESIS PAGES
 %----------------------------------------------------------------------------------------
